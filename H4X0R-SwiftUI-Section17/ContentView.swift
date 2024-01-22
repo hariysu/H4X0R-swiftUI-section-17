@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    let posts = [Post(id: "1", title: "Hello"), Post(id: "2", title: "World")]
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            List(posts) { post in
+                Text(post.title)
+            }.navigationBarTitle("H4X0R NEWS")
         }
-        .padding()
     }
 }
 
@@ -23,4 +23,9 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+
+struct Post : Identifiable{
+    let id: String
+    let title: String
 }
