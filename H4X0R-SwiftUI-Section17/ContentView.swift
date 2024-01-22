@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    let posts = [Post(id: "1", title: "Hello"), Post(id: "2", title: "World")]
+    let posts = [Post2(id: "1", title: "Hello"), Post2(id: "2", title: "World")]
     
     var body: some View {
         NavigationView {
@@ -25,7 +25,7 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct Post : Identifiable{
+struct Post2 : Identifiable{
     let id: String
     let title: String
 }
